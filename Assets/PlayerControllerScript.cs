@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlayerControllerScript : MonoBehaviour {
 
-	public float speed = 5f;
+	public float movementSpeed = 5f;
 	public float rotationSpeed = 10f;
 
 	Vector3 movement;
@@ -28,7 +28,7 @@ public class PlayerControllerScript : MonoBehaviour {
 	void Move(float horizontalAxisOffset, float verticalAxisOffset) {
 		movement.Set (horizontalAxisOffset, 0f, verticalAxisOffset);
 
-		movement = movement.normalized * speed * Time.deltaTime;
+		movement = movement.normalized * movementSpeed * Time.deltaTime;
 
 		playerRigidbody.MovePosition (playerTransform.position + movement);
 	}
