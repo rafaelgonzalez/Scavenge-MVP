@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerControllerScript : MonoBehaviour {
 
 	public float movementSpeed = 5f;
-	public float rotationSpeed = 10f;
+	public float rotationSpeed = 5f;
 
 	Vector3 movement;
 	Transform playerTransform;
@@ -21,12 +21,12 @@ public class PlayerControllerScript : MonoBehaviour {
 		float horizontalAxisOffset = Input.GetAxis ("Horizontal");
 		float verticalAxisOffset = Input.GetAxis ("Vertical");
 
-		Move (horizontalAxisOffset, verticalAxisOffset);
+		Move (verticalAxisOffset);
 		Rotate (horizontalAxisOffset);
 	}
 
-	void Move(float horizontalAxisOffset, float verticalAxisOffset) {
-		movement.Set (horizontalAxisOffset, 0f, verticalAxisOffset);
+	void Move(float verticalAxisOffset) {
+		movement.Set (0f, 0f, verticalAxisOffset);
 
 		movement = movement.normalized * movementSpeed * Time.deltaTime;
 
