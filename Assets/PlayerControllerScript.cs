@@ -25,8 +25,8 @@ public class PlayerControllerScript : MonoBehaviour {
 		float horizontalAxisOffset = Input.GetAxis ("Horizontal");
 		float verticalAxisOffset = Input.GetAxis ("Vertical");
 
-		Move (verticalAxisOffset);
 		Rotate (horizontalAxisOffset);
+		Move (verticalAxisOffset);
 	}
 
 	void Move(float verticalAxisOffset) {
