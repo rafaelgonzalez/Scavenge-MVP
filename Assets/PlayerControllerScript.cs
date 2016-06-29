@@ -14,6 +14,7 @@ public class PlayerControllerScript : MonoBehaviour {
 	void Start () {
 		playerTransform = GetComponent<Transform> ();
 		playerRigidbody = GetComponent<Rigidbody> ();
+		GetComponent<Renderer>().material.color = Color.blue;
 	}
 	
 	// Update is called once per frame
