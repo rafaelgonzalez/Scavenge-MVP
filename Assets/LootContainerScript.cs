@@ -11,16 +11,22 @@ public class LootContainerScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		if (hasLoot == true) {
-			GetComponent<Renderer>().material.color = Color.yellow;
-		}
-		else {
-			GetComponent<Renderer>().material.color = Color.grey;
-		}
+		UpdateLootState (hasLoot);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
+	}
+
+	void UpdateLootState (bool lootState) {
+		hasLoot = lootState;
+
+		if (hasLoot == true) {
+			GetComponent<Renderer>().material.color = lootColor;
+		}
+		else {
+			GetComponent<Renderer>().material.color = noLootColor;
+		}
 	}
 }
