@@ -6,7 +6,7 @@ public class PlayerControllerScript : MonoBehaviour {
 	public float movementSpeed = 5f;
 	public float rotationSpeed = 5f;
 
-	Vector3 movement;
+	Vector3 movementDirection = Vector3.zero;
 	Transform playerTransform;
 	Rigidbody playerRigidbody;
 
@@ -27,11 +27,11 @@ public class PlayerControllerScript : MonoBehaviour {
 	}
 
 	void Move(float verticalAxisOffset) {
-		movement.Set (0f, 0f, verticalAxisOffset);
+		movementDirection.Set (0f, 0f, verticalAxisOffset);
 
-		movement = movement.normalized * movementSpeed * Time.deltaTime;
+		movementDirection = movementDirection.normalized * movementSpeed * Time.deltaTime;
 
-		playerRigidbody.MovePosition (playerTransform.position + movement);
+		playerRigidbody.MovePosition (playerTransform.position + movementDirection);
 	}
 
 	void Rotate(float horizontalAxisOffset) {
