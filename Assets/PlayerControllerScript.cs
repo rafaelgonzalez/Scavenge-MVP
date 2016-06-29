@@ -27,9 +27,7 @@ public class PlayerControllerScript : MonoBehaviour {
 	}
 
 	void Move(float verticalAxisOffset) {
-		movementDirection.Set (0f, 0f, verticalAxisOffset);
-
-		movementDirection = movementDirection.normalized * movementSpeed * Time.deltaTime;
+		movementDirection = playerRigidbody.transform.forward.normalized * movementSpeed * Time.deltaTime * verticalAxisOffset;
 
 		playerRigidbody.MovePosition (playerTransform.position + movementDirection);
 	}
