@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+[RequireComponent (typeof (Transform))]
+[RequireComponent (typeof (Rigidbody))]
+[RequireComponent (typeof (Renderer))]
 public class PlayerControllerScript : MonoBehaviour {
 
 	public float movementSpeed = 5f;
