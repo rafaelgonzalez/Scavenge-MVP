@@ -4,12 +4,13 @@ using System.Collections.Generic;
 
 public class InteractHitzoneScript : MonoBehaviour {
 
+	InventoryManagerScript playerInventory;
 	List<GameObject> lootableObjects;
 
 	// Use this for initialization
 	void Start () {
-		// create list of lootable gameobjects
 		lootableObjects = new List<GameObject>();
+		playerInventory = gameObject.transform.parent.GetComponent<InventoryManagerScript> ();
 	}
 	
 	// Update is called once per frame
@@ -17,6 +18,7 @@ public class InteractHitzoneScript : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.E) && lootableObjects.Count > 0) {
 			LootContainerScript lootContainerScript = lootableObjects [0].GetComponent<LootContainerScript>();
 			lootContainerScript.PlayerInteract ();
+			playerInventory.items += 1;
 
 			if (!lootContainerScript.hasLoot)
 				RemoveLootableObject (lootableObjects [0]);

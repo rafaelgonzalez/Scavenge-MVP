@@ -531,6 +531,7 @@ GameObject:
   - 23: {fileID: 1576120278}
   - 114: {fileID: 1576120282}
   - 54: {fileID: 1576120283}
+  - 114: {fileID: 1576120284}
   m_Layer: 0
   m_Name: Player Cylinder
   m_TagString: Untagged
@@ -627,6 +628,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
+--- !u!114 &1576120284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1576120277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7b509d6858fbe647a464b418a4e57dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items: 0
 --- !u!1 &2078580063
 GameObject:
   m_ObjectHideFlags: 0
