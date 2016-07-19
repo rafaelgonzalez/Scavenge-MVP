@@ -29,4 +29,12 @@ public class LootContainerScript : MonoBehaviour {
 			GetComponent<Renderer>().material.color = noLootColor;
 		}
 	}
+
+	public bool PlayerCanInteract () {
+		return hasLoot;
+	}
+
+	public void PlayerInteract() {
+		UpdateLootState (false);
+	}
 }
