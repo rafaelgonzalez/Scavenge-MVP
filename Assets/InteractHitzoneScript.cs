@@ -18,7 +18,7 @@ public class InteractHitzoneScript : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.E) && lootableObjects.Count > 0) {
 			LootContainerScript lootContainerScript = lootableObjects [0].GetComponent<LootContainerScript>();
 			lootContainerScript.PlayerInteract ();
-			playerInventory.items += 1;
+			playerInventory.incrementItemCount();
 
 			if (!lootContainerScript.hasLoot)
 				RemoveLootableObject (lootableObjects [0]);
