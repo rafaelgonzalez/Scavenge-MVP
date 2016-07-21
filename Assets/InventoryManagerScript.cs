@@ -10,6 +10,8 @@ public class InventoryManagerScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		totalItems = countTotalLootableObjectWithLoot ();
+
 		lootPanelScript.setLootedQuantity(itemCount);
 		lootPanelScript.setMaxLootableQuantity(totalItems);
 	}
@@ -23,5 +25,19 @@ public class InventoryManagerScript : MonoBehaviour {
 		itemCount += 1;
 
 		lootPanelScript.setLootedQuantity (itemCount);
+	}
+
+	private int countTotalLootableObjectWithLoot () {
+		LootContainerScript[] lootContainerScripts = Component.FindObjectsOfType<LootContainerScript> ();
+
+		int count = 0;
+
+		for (int i = 0; i < lootContainerScripts.Length; i++) {
+			if (lootContainerScripts[i].hasLoot == true) {
+				count += 1;
+			}
+		}
+
+		return count;
 	}
 }
