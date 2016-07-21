@@ -12,9 +12,6 @@ public class LootPanelScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		lootSlider.minValue = 0;
-		lootSlider.maxValue = 0;
-		lootSlider.value = 0;
 	}
 	
 	// Update is called once per frame
