@@ -13,7 +13,7 @@ GameObject:
   - 23: {fileID: 2387896}
   - 114: {fileID: 11469414}
   m_Layer: 0
-  m_Name: Loot Container Prefab
+  m_Name: Loot Container
   m_TagString: Lootable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -89,16 +89,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasLoot: 0
-  lootColor:
-    r: 1
-    g: 0.92156863
-    b: 0.015686275
-    a: 1
-  noLootColor:
-    r: 0.5
-    g: 0.5
-    b: 0.5
-    a: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
