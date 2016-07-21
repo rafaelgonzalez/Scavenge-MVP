@@ -4,7 +4,7 @@ using System.Collections;
 public class InventoryManagerScript : MonoBehaviour {
 
 	int itemCount = 0;
-	public int totalItems = 0;
+	int totalItems = 0;
 
 	public LootPanelScript lootPanelScript;
 
