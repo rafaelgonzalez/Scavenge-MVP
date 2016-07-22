@@ -1212,8 +1212,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e612a19bce48eb46a3cc09ba8af5e85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 5
-  rotationSpeed: 5
+  movementSpeed: 7
+  rotationSpeed: 2
 --- !u!54 &1576120283
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1240,7 +1240,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7b509d6858fbe647a464b418a4e57dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalItems: 0
   lootPanelScript: {fileID: 1731162148}
 --- !u!1 &1731162144
 GameObject:
