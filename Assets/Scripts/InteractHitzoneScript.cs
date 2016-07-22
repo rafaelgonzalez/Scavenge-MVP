@@ -15,7 +15,7 @@ public class InteractHitzoneScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.E) && lootableObjects.Count > 0) {
+		if (Input.GetButton("Interact") && lootableObjects.Count > 0) {
 			LootContainerScript lootContainerScript = lootableObjects [0].GetComponent<LootContainerScript>();
 			lootContainerScript.PlayerInteract ();
 			playerInventory.incrementItemCount();
